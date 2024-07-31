@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css'%}">
+    <title> {% block title%} HOME {% endblock %} </title>
+</head>
+
+<body>
+    {% include 'components/sidebar.html' %}
+    <div class="container_principal">
+        <div class="sidebar">
+            <div class="header-top">
+                <div class="container">
+                    <div class="col">
+                        <div class="bienvenida-text">
+                            <p>World Wide Completely Free Returns and Shipping</p>
+                            <div clas="col-contacts">
+                                <a href="" class="cell">
+                                    <img src="{% static 'img/icon-user.png'%}" alt="icon-user">
+                                    <span>Login / Register</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-logo">
+                <img src="https://htmldemo.net/hmart/hmart/assets/images/logo/logo.png" class="logo-responsive">
+            </div>
+            <div class="seach-header">
+                <input type="text" placeholder="Search">
+                <button type="submit">Icono</button>
+            </div>
+
+            <div class="col-icon">
+                <div class="icon-bar">
+                    <img src="" class="like">
+                    <img src="" class="compra">
+                </div>
+            </div>
+        </div>
+        <div class="header-nav-ul-li">
+            <div class="container-nav">
+                <div class="main-menu">
+                    <ul class="ul-nav">
+                        <a href="#" class="home-nav">HOME</a>
+                        <ul>
+                            <li>HOME 1</li>
+                            <li>HOME 2</li>
+                        </ul>
+                        <a href="#" class="about-nav">ABOUT</a>
+                        <a href="#" class="page-nav">PAGES</a>
+                        <ul>
+                            <li>Inner Pages</li>
+                            <li>404 Page</li>
+                            <li>Order Tracking</li>
+                            <li>Faq Page</li>
+                            <li>Coming Soon Page</li>
+                            <li>HOME 2</li>
+                        </ul>
+                        <a href="#" class="shop-nav">SHOP</a>
+
+                        <a href="#" class="blog-nav">BLOG</a>
+                        <a href="#" class="contact-nav">CONTACT</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cuerpo">
+        <div class="carrucell">
+            <div class="contenido-cuerpo">
+                <span class="categoria">
+            </div>
+        </div>
+
+        {% block content %}
+        <h2>cuerpo</h2>
+        {% endblock %}
+    </div>
+    </div>
+</body>
+
+</html>
