@@ -11,67 +11,101 @@ body {
 
 }
 
+/* .sidebar{
+    height: 100px;
+} */
+
+.col-head{
+    /* background-color: #0cf073; */
+}
 
 .container_principal {
-    background-color: black;
-    display: flex;
-    width: 100%;
+    background-color: #1a1717;
+    height: 100%;
     flex-wrap: wrap;
+}
+
+
+.home-icon::after{
+    width: 20px;
+    height: 20px;
+    background-color: #f1f1f1;
+    content: "";
+    position: relative;
 }
 
 .header-top {
     width: 100%;
     height: 100%;
-    background-color: green;
+    background-color: #1a1717;
     color: #f1f1f1;
-    padding: 10px;
+}
 
+.main-menu{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(66, 108, 247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
 }
 
 .header-bottom {
     width: 100%;
-    height: 100%;
-    background-color: red;
+    height: 100px;
+    background-color: #1a1717;
     color: #f1f1f1;
     padding: 10px;
     display: flex;
+    border-top: 0.1px solid #5c5b5b;
 }
+
+
 
 .sidebar {
     width: 100%;
-    height: 100px;
     color: black;
     font-style: italic;
 }
 
-.header-nav-ul-li {
-    width: 100%;
-    height: 80px;
-    background-color: rgb(65, 5, 5);
-    color: #f1f1f1;
-    padding: 10px;
-    display: flex;
-}
-
 .container-nav {
-    position: relative;
     width: 100%;
-    height: 100%;
-    background-color: rgb(92, 92, 98);
+    height: 50px;
     color: #f1f1f1;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    
 }
 
-.ul-nav {
+.header-nav-ul-li {
     width: 100%;
-    height: 100%;
-    background-color: yellow;
+    background-color: FFFFFF;
     color: #f1f1f1;
-    padding: 10px;
     display: flex;
-    position: absolute;
+    justify-content: center;
+    padding: 0px 15px;
+     
 }
+
+
+.ul-nav {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    gap: 20px;
+    .ul, li{
+        display: none;
+        }
+    a {
+    list-style: none;
+    color: white;
+    text-decoration: none;
+    }
+}
+
 
 .cuerpo {
     width: 100%;
