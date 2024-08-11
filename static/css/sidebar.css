@@ -1,0 +1,116 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    /* background-image: url(https://media.istockphoto.com/id/995518546/es/foto/variedad-de-coloridas-frutas-tropicales-maduras-vista-superior.jpg?s=612x612&w=0&k=20&c=13UWM8tdCiTVLc2SEgYp9GuBLCfdpID-tkR8PpoBdWo=);
+    background-size: cover; */
+
+    
+}
+
+
+.padre {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 10px;
+    background-color: grey;
+    color: white;
+    border: 5px;
+}
+
+
+.tbt{
+    width: 50%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+    color: white;
+    padding: 5px;
+    border-radius: 7px;
+}
+
+span {
+    padding: 4px;
+    border-radius: 6px;
+    
+}
+
+.rojo {
+    background-color: rgb(161, 81, 81);
+
+}
+
+.verde {
+    background-color: rgb(110, 181, 110);
+}
+
+.naranja {
+    background-color: rgb(180, 151, 97);
+}
+
+
+.azul {
+    background-color: rgb(105, 156, 211);
+}
+
+
+
+
+.sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #252525;
+    height: 50%;
+    height: 50px;
+    color:black;
+    font-style: italic;
+}
+
+.sidebar-ul {
+    display: flex;
+    gap: 10px;
+    padding: 20px;
+    
+}
+
+.sidebar li{
+    padding: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px ;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+
+.sidebar li:hover {
+    background-color: #3062cd;
+    color: white;
+    transition: background-color 0.5s ease-in-out;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    
+}
+
+.sidebar li:focus {
+    color: #3062cd;
+}
+
+.sidebar ul a {
+    list-style: none;
+    text-decoration: none;
+}
+

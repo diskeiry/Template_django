@@ -5,170 +5,676 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
     <title> {% block title%} HOME {% endblock %} </title>
 </head>
 
 <body>
     {% include 'components/sidebar.html' %}
-    <div class="container_principal">
-        <div class="sidebar">
-            <div class="header-top">
-                <div class="container">
+    <div class="container">
+        <div class="container_principal">
+            <div class="sidebar">
+                <div class="header-top">
                     <div class="col-head">
                         <div class="bienvenida-text">
-                            <p>World Wide Completely Free Returns and Shipping</p>
-                            <div clas="col-contacts">
-                                <a href="" class="cell">
-                                    <img src="{% static 'img/icon-user.png'%}" alt="icon-user">
-                                    <span>Login / Register</span>
-                                </a>
+                            <p class="p-b">World Wide Completely Free Returns and Shipping</p>
+                            <div class="cell">
+                                <a href="#"><img src="{% static 'img/llamar.png' %}" alt="icon-llamar">
+                                0123456789</a><div class="linea"></div>
+                                <a href="#"><img src="{% static 'img/email.png' %}" alt="icon-user">demo@example.com</a><div class="linea"></div>
+                                <a href="#"><img src="{% static 'img/usuario.png' %}" alt="icon-user">Account</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="header-bottom">
-                <div class="header-logo">
-                    <img src="https://htmldemo.net/hmart/hmart/assets/images/logo/logo.png" class="logo-responsive">
-                </div>
-                <div class="seach-header">
-                    <input type="text" placeholder="Search">
-                    <button type="submit">Icono</button>
-                </div>
+            <div class="header-bottom">
+                <div class="header-nav">
+                    <div class="header-logo">
+                        <a href="#"><img src="https://htmldemo.net/hmart/hmart/assets/images/logo/logo.png" class="logo-responsive"></a>
+                    </div>
+                    <div class="seach-header">
+                        <div class="seach-btn">
+                            <input type="text" placeholder="Search">
+                            <button class="btn-seach" type="submit"><img src="{% static 'img/lupa.png' %}"></button>
+                        </div>
+                    </div>
 
-                <div class="col-icon">
-                    <div class="icon-bar">
-                        <img src="https://htmldemo.net/hmart/hmart/index.html#offcanvas-wishlist" class="like">
-                        <img src="https://htmldemo.net/hmart/hmart/index.html#offcanvas-cart" class="compra">
+                    <div class="col-icon">
+                        <div class="icon-bar">
+                            <img src="{% static 'img/corazon.png' %}" class="like">
+                            <img src="{% static 'img/shopping.png' %}" class="shopping">
+                        </div>
                     </div>
                 </div>
-        </div>
-        <div class="header-nav-ul-li">
-            <div class="container-nav">
-                <div class="main-menu">
-                    <ul class="ul-nav">
-                        <div class="home-in"><a href="#">HOME</a>
-                        <div class="home-icon"></div>
+            </div>
+            <div class="header-nav-ul-li">
+                <div class="container-nav">
+                    <div class="main-menu">
+                        <ul class="ul-nav">
+                            <a href="#">HOME
+                            <img src="{% static 'img/icon-flecha.png' %}" class="flecha"></a>
                             <ul>
-                                <li><a href="#">Home 1</a></li>
-                                <li><a href="#">Home 2</a></li>
+                                <li>
+                                    <a href="#">Home 1</a></li>
+                                <li>
+                                    <a href="#">Home 2</a></li>
                             </ul>
-                        </div>
-                        <div class="about-in-nav">
                             <a href="#">ABOUT</a>
-                        </div>
-                        <div class="page-in-nav"><a href="#" class="page-nav">PAGES</a>
-                            <ul>
-                                <li><a href="#">Inner Pages</a></li>
-                                <li><a href="#">404 Page</a></li>
-                                <li><a href="#">Order Tracking</a></li>
-                                <li><a href="#">Faq Page</a></li>
-                                <li><a href="#">Coming Soon Page</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Other Shop Pages</a></li>
-                                <li><a href="#">Cart Page</a></li>
-                                <li><a href="#">Checkout Page</a></li>
-                                <li><a href="#">Compare Page</a></li>
-                                <li><a href="#">Wishlist Page</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Related Shop Pages</a></li>
-                                <li><a href="#">Account Page</a></li>
-                                <li><a href="#">Login & Register Page</a></li>
-                                <li><a href="#">Empty Cart Page</a></li>
-                                <li><a href="#">Thank You Page</a></li>
-                            </ul>
-                            <!-- <img src="https://htmldemo.net/hmart/hmart/assets/images/banner/menu-banner.png" alt=""> -->
-                        </div>
-                        <div class="shop-in-nav"><a href="#">SHOP</a>
-                            <ul>
-                                <li><a href="#">Shop Page</a></li>
-                                <li><a href="#">Shop 3 Column</a></li>
-                                <li><a href="#">Shop 4 Column</a></li>
-                                <li><a href="#">Shop Left Sidebar</a></li>
-                                <li><a href="#">Shop Right Sidebar</a></li>
-                                <li><a href="#">Shop List Left Sidebar</a></li>
-                                <li><a href="#">Shop List Right Sidebar</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Product Details Page</a></li>
-                                <li><a href="#">Product Single</a></li>
-                                <li><a href="#">Product variable</a></li>
-                                <li><a href="#">Product Affiliate</a></li>
-                                <li><a href="#">Product Group</a></li>
-                                <li><a href="#">Product Tab 2</a></li>
-                                <li><a href="#">product Tab 3</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Single Product Page</a></li>
-                                <li><a href="#">Product Slider</a></li>
-                                <li><a href="#">Product Gallery Left</a></li>
-                                <li><a href="#">Product Gallery Right</a></li>
-                                <li><a href="#">Product Sticky Left</a></li>
-                                <li><a href="#">Product Sticky Right</a></li>
-                                <li><a href="#">Cart Page</a></li>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Single Product Page</a></li>
-                                <li><a href="#">Checkout Page</a></li>
-                                <li><a href="#">Compare Page</a></li>
-                                <li><a href="#">Wishlist Page</a></li>
-                                <li><a href="#">Account Page</a></li>
-                                <li><a href="#">Login & Register Page</a></li>
-                                <li><a href="#">Empty Cart Page</a></li>
-                            </ul>
-                        </div>
-                        <div class="blog-in-nav"><a href="#">BLOG</a>
-                            <ul>
-                                <li><a href="#">Blog Grid</a></li>
-                                    <ul>
-                                        <li><a href="#">Blog Grid </a></li>
-                                        <li><a href="#">Blog Grid Left Sidebar</a></li>
-                                        <li><a href="#">Blog Grid Right Sidebar</a></li>
-                                    </ul>
-                                <li><a href="#">Blog List</a></li>
-                                    <ul>
-                                        <li><a href="#">Blog List</a></li>
-                                        <li><a href="#">Blog List Left Sidebar</a></li>
-                                        <li><a href="#">Blog List Right Sidebar</a></li>
-                                    </ul>
-                                <li><a href="#">Single Blog</a></li>
-                                    <ul>
-                                        <li><a href="#">Single Blog</a></li>
-                                        <li><a href="#">Single Blog Left Sidebar</a></li>
-                                        <li><a href="#">Single Blog Right Sidebar</a></li>
-                                    </ul>
-                            </ul>
-                            <ul>
-                                <li><a href="#">Blog Single Page</a></li>
-                                <li><a href="#">Blog Grid 2 Column</a></li>
-                                <li><a href="#">Blog Grid 3 Column</a></li>
-                                <li><a href="#">Blog Grid 4 Column</a></li>
-                            </ul>
-
-                        </div>
-                        <a href="#" class="contact-nav">CONTACT</a>
-                    </ul>
+                            <a href="#" class="page-nav">PAGES
+                                <img src="{% static 'img/icon-flecha.png' %}" class="flecha">
+                            </a>
+                                <ul>
+                                    <li><a href="#">Inner Pages</a></li>
+                                    <li><a href="#">404 Page</a></li>
+                                    <li><a href="#">Order Tracking</a></li>
+                                    <li><a href="#">Faq Page</a></li>
+                                </ul>
+                                    <li><a href="#">Coming Soon Page</a></li>
+                                <ul>
+                                    <li><a href="#">Other Shop Pages</a></li>
+                                    <li><a href="#">Cart Page</a></li>
+                                    <li><a href="#">Checkout Page</a></li>
+                                    <li><a href="#">Compare Page</a></li>
+                                    <li><a href="#">Wishlist Page</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Related Shop Pages</a></li>
+                                    <li><a href="#">Account Page</a></li>
+                                    <li><a href="#">Login & Register Page</a></li>
+                                    <li><a href="#">Empty Cart Page</a></li>
+                                    <li><a href="#">Thank You Page</a></li>
+                                </ul>
+                            
+                                <a href="#">SHOP
+                                    <img src="{% static 'img/icon-flecha.png' %}" class="flecha">
+                                </a>
+                                <ul>
+                                    <li><a href="#">Shop Page</a></li>
+                                    <li><a href="#">Shop 3 Column</a></li>
+                                    <li><a href="#">Shop 4 Column</a></li>
+                                    <li><a href="#">Shop Left Sidebar</a></li>
+                                    <li><a href="#">Shop Right Sidebar</a></li>
+                                    <li><a href="#">Shop List Left Sidebar</a></li>
+                                    <li><a href="#">Shop List Right Sidebar</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Product Details Page</a></li>
+                                    <li><a href="#">Product Single</a></li>
+                                    <li><a href="#">Product variable</a></li>
+                                    <li><a href="#">Product Affiliate</a></li>
+                                    <li><a href="#">Product Group</a></li>
+                                    <li><a href="#">Product Tab 2</a></li>
+                                    <li><a href="#">product Tab 3</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Single Product Page</a></li>
+                                    <li><a href="#">Product Slider</a></li>
+                                    <li><a href="#">Product Gallery Left</a></li>
+                                    <li><a href="#">Product Gallery Right</a></li>
+                                    <li><a href="#">Product Sticky Left</a></li>
+                                    <li><a href="#">Product Sticky Right</a></li>
+                                    <li><a href="#">Cart Page</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Single Product Page</a></li>
+                                    <li><a href="#">Checkout Page</a></li>
+                                    <li><a href="#">Compare Page</a></li>
+                                    <li><a href="#">Wishlist Page</a></li>
+                                    <li><a href="#">Account Page</a></li>
+                                    <li><a href="#">Login & Register Page</a></li>
+                                    <li><a href="#">Empty Cart Page</a></li>
+                                </ul>
+                                <a href="#">BLOG
+                                    <img src="{% static 'img/icon-flecha.png' %}" class="flecha">
+                                </a>
+                                <ul>
+                                    <li><a href="#">Blog Grid</a></li>
+                                        <ul>
+                                            <li><a href="#">Blog Grid </a></li>
+                                            <li><a href="#">Blog Grid Left Sidebar</a></li>
+                                            <li><a href="#">Blog Grid Right Sidebar</a></li>
+                                        </ul>
+                                    <li><a href="#">Blog List</a></li>
+                                        <ul>
+                                            <li><a href="#">Blog List</a></li>
+                                            <li><a href="#">Blog List Left Sidebar</a></li>
+                                            <li><a href="#">Blog List Right Sidebar</a></li>
+                                        </ul>
+                                    <li><a href="#">Single Blog</a></li>
+                                        <ul>
+                                            <li><a href="#">Single Blog</a></li>
+                                            <li><a href="#">Single Blog Left Sidebar</a></li>
+                                            <li><a href="#">Single Blog Right Sidebar</a></li>
+                                        </ul>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">Blog Single Page</a></li>
+                                    <li><a href="#">Blog Grid 2 Column</a></li>
+                                    <li><a href="#">Blog Grid 3 Column</a></li>
+                                    <li><a href="#">Blog Grid 4 Column</a></li>
+                                </ul>
+                            <a href="#" >CONTACT</a>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <div class="cuerpo">
-        <div class="carrucell">
-            <div class="contenido-cuerpo">
-                <span class="categoria">
+{% block content %}
+    <div class="carrucell">
+        <div class="contenido-cuerpo">
+            <div class="text-slide-content">
+                <span class="categoria-cuerpo">
+                        Welcome To Hmart
+                </span>
+                <h2 class="titlte-1">Your Home
+                    <br>
+                    Smart Device & 
+                    <br>
+                    Best Solution 
+                </h2>
+                <div class="btn-slide">
+                        <a href="#" >Shop All Devices</a>
+                </div>
+            </div>        
+            <div class="slide-img">
+                    <!-- <img src="https://htmldemo.net/hmart/hmart/assets/images/hero/inner-img/hero-1-2.png"> -->
+                    <img src="https://htmldemo.net/hmart/hmart/assets/images/hero/inner-img/hero-1-1.png">
             </div>
         </div>
+        <div class="contenido-cuerpo">
+                    <div class="text-slide-content">
+                        <span class="categoria-cuerpo">
+                            Welcome To Hmart
+                        </span>
+                        <h2 class="titlte-1">Your Home
+                            <br>
+                            Smart Device &
+                            <br>
+                            Best Solution
+                        </h2>
+                        <div class="btn-slide">
+                            <a href="#">Shop All Devices</a>
+                        </div>
+                    </div>
+                        <!-- <div class="slide-img">
+                            <img src="https://htmldemo.net/hmart/hmart/assets/images/hero/inner-img/hero-1-1.png">
+                        </div> -->
+        </div> 
+    </div>
+    <!-- Your Content Here --> 
+    <div class="container-dpt">
+        <!-- <div class="row"> -->
+        <div class="single-service">
+                    <div class="col-md">
+                        <img src="https://htmldemo.net/hmart/hmart/assets/images/banner/3.webp" alt="">
+                                <!-- <div class="text-span"> -->
+                            <h3 class="title-service">Smart Watch For <br>
+                            Your Hand</h3>
+                            <span class="category-prc">From $29.00</span>
+                                <!-- </div> -->
+                            <a href="https://htmldemo.net/hmart/hmart/shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"><i class="fa fa-arrow-right" aria-hidden="true"></i></i></a>
+                                <!-- </div> -->
+                    </div>
+        </div>
+        <div class="col-md">
+                        <!-- <div class="single-service"> -->
+                    <img src="https://htmldemo.net/hmart/hmart/assets/images/banner/4.webp" alt="">
+                            <!-- <div class="text-span"> -->
+                    <h3 class="title-service-2">Headphones</h3>
+                    <span class="category-prc">From $95.00</span>
+                            <!-- </div> -->
+                    <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                        <!-- </div> -->
+                        <!-- <div class="single-service"> -->
+                    <img src="https://htmldemo.net/hmart/hmart/assets/images/banner/5.webp" alt="">
+                    <div class="banner-content">
+                        <h3 class="title-service-3">Smartphone</h3>
+                        <span class="category-prc">From $69.00</span>
+                        <a href="shop-left-sidebar.html" class="shop-link"><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+                    </div>
+                        <!-- </div> -->
+        </div>
+    </div>
+    <div class="col-md-2">
+        <div class="btn-group">
+                    <ul>
+                        <li><button>
+                            New Arrivals
+                        </button><button>
+                            Top Rated
+                        </button><button>
+                            Featured
+                        </button></li>
+                    </ul>
+        </div>
+        <div class="col-md-3">
+                    <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                            </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-grou-2">
+                    <div class="producto">
+                        <span class="badges">
+                            <span class="new">New</span>
+                        </span>
+                        <div class="thumb">
+                            <a href="#" class="image">
+                                <img src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp" alt="Product">
+                                <img class="hover-image" src="https://htmldemo.net/hmart/hmart/assets/images/product-image/1.webp"
+                                    alt="Product">
+                            </a>
+                        </div>
+                        <div class="content">
+                            <span class="categoria-text"><a href="#">Accessories</a></span>
+                            <h5 class="title-h5">
+                                <a href="#">Modern Smart Phone
+                                </a>
+                            </h5>
+                            <span class="precio-span">
+                                <span class="new">$38.50</span>
+                            </span>
+                        </div>
+                        <div class="actions">
+                            <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                            </button>
+                            <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                            <button class="action quickview" data-link-action="quickview" title="Quick view" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                            </button>
+                            <button class="action compare" title="Compare" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                   
+                        
+                
+        </div>
+    </div>
+    <div class="row-1">
+        <div class="row-ctn">
+                <div class="col-12">
+                    <h2 class="title"><span>Smart Fashion</span> With Smart Devices </h2>
+                    <a href="#" class="btn-slide-2">Shop All Devices</a>
+                </div>
+        </div>
+    </div>
+    <div class="feature-product-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <div class="section-title">
+                        <h2 class="title">Featured Offers</h2>
+                        <p>There are many variations of passages of Lorem Ipsum available</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-xl-6 col-lg-6 mb-md-35px mb-lm-35px">
+                        <div class="single-feature-content">
+                            <div class="feature-image">
+                                <img src="assets/images/feature-image/1.webp" alt="">
+                            </div>
+                            <div class="top-content">
+                                <h4 class="title"><a href="single-product.html">Bluetooth Headphone </a></h4>
+                                <span class="price">
+                                    <span class="old"><del>$48.50</del></span>
+                                    <span class="new">$38.50</span>
+                                </span>
+                            </div>
+                            <div class="bottom-content">
+                                <div class="deal-timing">
+                                    <div data-countdown="2023/09/15"><span class="cdown hour"><span class="cdown-1">0</span>
+                                            <p>Hrs</p>
+                                        </span> <span class="cdown minutes"><span class="cdown-1">00</span>
+                                            <p>Min</p>
+                                        </span> <span class="cdown second"><span class="cdown-1"> 00</span>
+                                            <p>Sec</p>
+                                        </span></div>
+                                </div>
+                                <a href="single-product-variable.html" class="btn btn-primary  m-auto"> Shop
+                                    Now </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-6">
+                        <div class="feature-right-content">
+                            <div class="image-side">
+                                <img src="assets/images/feature-image/2.webp" alt="">
+                                <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
+                            </div>
+                            <div class="content-side">
+                                <div class="deal-timing">
+                                    <span>End In:</span>
+                                    <div data-countdown="2024/09/15"><span class="cdown hour"><span class="cdown-1">12</span>
+                                            <p>Hrs</p>
+                                        </span> <span class="cdown minutes"><span class="cdown-1">51</span>
+                                            <p>Min</p>
+                                        </span> <span class="cdown second"><span class="cdown-1"> 21</span>
+                                            <p>Sec</p>
+                                        </span></div>
+                                </div>
+                                <div class="prize-content">
+                                    <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                                    <span class="price">
+                                        <span class="old">$48.50</span>
+                                        <span class="new">$38.50</span>
+                                    </span>
+                                </div>
+                                <div class="product-feature">
+                                    <ul>
+                                        <li>Predecessor : <span>None.</span></li>
+                                        <li>Support Type : <span>Neutral.</span></li>
+                                        <li>Cushioning : <span>High Energizing.</span></li>
+                                        <li>Total Weight : <span> 300gm</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feature-right-content mt-30px">
+                            <div class="image-side">
+                                <img src="assets/images/feature-image/3.webp" alt="">
+                                <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i></button>
+                            </div>
+                            <div class="content-side">
+                                <div class="deal-timing">
+                                    <span>End In:</span>
+                                    <div data-countdown="2023/09/15"><span class="cdown hour"><span class="cdown-1">0</span>
+                                            <p>Hrs</p>
+                                        </span> <span class="cdown minutes"><span class="cdown-1">00</span>
+                                            <p>Min</p>
+                                        </span> <span class="cdown second"><span class="cdown-1"> 00</span>
+                                            <p>Sec</p>
+                                        </span></div>
+                                </div>
+                                <div class="prize-content">
+                                    <h5 class="title"><a href="single-product.html">Ladies Smart Watch</a></h5>
+                                    <span class="price">
+                                        <span class="old">$48.50</span>
+                                        <span class="new">$38.50</span>
+                                    </span>
+                                </div>
+                                <div class="product-feature">
+                                    <ul>
+                                        <li>Predecessor : <span>None.</span></li>
+                                        <li>Support Type : <span>Neutral.</span></li>
+                                        <li>Cushioning : <span>High Energizing.</span></li>
+                                        <li>Total Weight : <span> 300gm</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    
+              
+{% endblock %}
 
-        {% block content %}
-        <h2>cuerpo</h2>
-        {% endblock %}
-    </div>
-    </div>
 </body>
 
 </html>

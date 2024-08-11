@@ -1,11 +1,15 @@
 from django.shortcuts import render
 from django.http import request
-# Create your views here.
+from . import usuarios
+
+lista = usuarios.usuarios
+# lista = ['Limon', 'Cereza', 'Tamarindo', 'Fresa', 'Coco',]
+
 def renderizar_consulta(request):
     return render(request, 'productos/consulta.productos.html')
 
 def renderizar_entrada(request):
-    return render(request, 'productos/entrada.productos.html')
+    return render(request, 'productos/entrada.productos.html',{'lista':lista})
 
 def renderizar_salida(request):
     return render(request, 'productos/salida.productos.html')

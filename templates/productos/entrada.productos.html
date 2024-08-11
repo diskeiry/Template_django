@@ -1,4 +1,5 @@
 {% extends "home.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,11 +7,28 @@
     <meta charset=" UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {% block title %}entrada Productos{% endblock %}
-
+</head>
 <body>
-    {% block content %}
-    <h1>estamos en entrada Productos</h1>
-    {% endblock %}
+{% block content %}
+    <div class="padre">
+        <div class="contendor">
+            <ul>
+                {% for item in lista %}
+                <li class="tbt">
+                    <label for="">{{item.nombre}} </label>
+                    <label for="">{{item.Apellido}}</label>
+                    <span class="{% if item.edad > 0 and item.edad <= 17 %}rojo{% elif item.edad > 17 and item.edad <= 34 %}naranja{% elif item.edad > 34 %}verde{% endif %}">{{item.edad}}</span>
+                    <span class="{% if item.estado == 'activo' %}verde{% elif item.estado == 'inactivo' %}rojo{% endif %}">{{item.estado}}</span>
+                    <span class="azul">{{item.email}}</span>
+                    <label for="">{{item.contrasena}}</label>
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+{% endblock %}
+
 </body>
 
 </html>
