@@ -9,25 +9,43 @@
     {% block title %}entrada Productos{% endblock %}
 </head>
 <body>
+    {% include 'components/sidebar.html' %}
 {% block content %}
-    <div class="padre">
-        <div class="contendor">
-            <ul>
-                {% for item in lista %}
-                <li class="tbt">
-                    <label for="">{{item.nombre}} </label>
-                    <label for="">{{item.Apellido}}</label>
-                    <span class="{% if item.edad > 0 and item.edad <= 17 %}rojo{% elif item.edad > 17 and item.edad <= 34 %}naranja{% elif item.edad > 34 %}verde{% endif %}">{{item.edad}}</span>
-                    <span class="{% if item.estado == 'activo' %}verde{% elif item.estado == 'inactivo' %}rojo{% endif %}">{{item.estado}}</span>
-                    <span class="azul">{{item.email}}</span>
-                    <label for="">{{item.contrasena}}</label>
-                </li>
-                {% endfor %}
-            </ul>
+<div class="container-form id='formulario'">
+    <div class="in-form">
+            {% if mensaje %}
+            <div class="alert alert-success" role="alert">
+                {{ mensaje }}
+            </div>
+            {% endif %}
+            <h1 class="form-title">Formulario Producto</h1>
+            <form action="{% url 'crear' %}" method="POST">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <label for="id_nombre">Nombre:</label>
+                <input type="text" id="id_nombre" name="nombre" >
+                <hr>
+                <label for="id_descripcion">Descripcion:</label>
+                <textarea id="id_descripcion" name="descripcion" rows="4" cols="40" ></textarea>
+                <hr>
+                <label for="id_precio">Precio:</label>
+                <input type="number" id="id_precio" name="precio" step="0.01" >
+                <hr>
+                <label for="id_stock">Stock:</label>
+                <input type="number" id="id_stock" name="stock" >
+                <hr>
+                <label for="id_categoria">Categoria:</label>
+                <input type="number" id="id_categoria" name="categoria" step="0.01">
 
+                <label for="id_image">Imagen (URL opcional):</label>
+                <input type="url" id="id_image" name="imagen" >
+
+                <button class=".toggle-btn" type="submit">Guardar</button>
+            </form>
         </div>
     </div>
 {% endblock %}
+<!-- <script src="{% static 'js/form.js' %}"></script> -->
 
 </body>
 

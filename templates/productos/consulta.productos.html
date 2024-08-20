@@ -1,29 +1,74 @@
 {% extends "home.html" %}
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset=" UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
     {% block title %}Consula Productos{% endblock %}
-</head>
+
 
 <body>
-
     {% block content %}
-<!--     
-    <ul>
-        {% for items in resultado %}
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <div class="container mt-5">
+        <h1 class="mb-4">Lista de Productos DB</h1>
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>categoria</th>
+                            <th>Stock</th>
+                            <th>Imagen</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if not productos %}
+                        <tr>
+                            <td colspan="6" class="text-center">No hay productos disponibles</td>
+                        </tr>
+                        {% endif %}
+                        {% for producto in productos %}
+                        <tr>
+                            <td>{{ producto.nombre }}</td>
+                            <td>{{ producto.descripcion }}</td>
+                            <td>{{ producto.precio }}</td>
+                            <td>{{ producto.stock }}</td>
+                            <td>{{ producto.categoria }}</td>
+                            <td><img src="{{ producto.imagen }}" alt="{{ producto.nombre }}" class="img-fluid" width="100"></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
 
-                <li>
 
-                 {{items.nombre}}
 
+    <!-- <div class="padre">
+        <div class="contendor">
+            <ul>
+                {% for item in lista %}
+                <li class="tbt">
+                    <label for="">{{item.nombre}} </label>
+                    <label for="">{{item.Apellido}}</label>
+                    <span class="{% if item.edad > 0 and item.edad <= 17 %}rojo{% elif item.edad > 17 and item.edad <= 34 %}naranja{% elif item.edad > 34 %}verde{% endif %}">{{item.edad}}</span>
+                    <span class="{% if item.estado == 'activo' %}verde{% elif item.estado == 'inactivo' %}rojo{% endif %}">{{item.estado}}</span>
+                    <span class="azul">{{item.email}}</span>
+                    <label for="">{{item.contrasena}}</label>
                 </li>
-                
-            {% endfor %}
-    </ul>
-     -->
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div> -->
+ 
     {% endblock %}
 </body>
 

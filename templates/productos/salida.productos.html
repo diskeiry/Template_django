@@ -9,7 +9,26 @@
 
 <body>
     {% block content %}
-    <h1>estamos en salidad</h1>
+    <!-- <h1>estamos en salidad</h1> -->
+    <!DOCTYPE html>
+    <html lang="es">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista de Productos</title>
+    </head>
+    
+    <body>
+        <h1>Lista de Productos</h1>
+        <ul>
+            {% for producto in form %}
+            <li>{{ producto.nombre }} - {{ producto.descripcion }} - {{ producto.precio }} - {{ producto.stock }} - <img src="{{ producto.image }}" alt="{{ producto.nombre }}"></li>
+            {% endfor %}
+        </ul>
+    </body>
+    
+    </html>
+
     {% endblock %}
 </body>
 

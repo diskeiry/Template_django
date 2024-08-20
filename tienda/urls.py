@@ -18,9 +18,11 @@ from django.contrib import admin
 from django.urls import path, include, re_path
 from app.productos import views
 
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('productos/', include('app.productos.urls')),
-    path('', views.renderizar_home),
+    path('', views.renderizar_home, name='url_home'),
+    
     
 ]

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Carrito de Compras</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <h1 class="mb-4">Carrito de Compras</h1>
+        <div class="row">
+            {% for key, value in carro.carro.items %}
+            <div class="col-md-4">
+                <div class="producto">
+                    <span class="badges">
+                        <span class="new">New</span>
+                    </span>
+                    <div class="thumb">
+                        <a href="#" class="image">
+                            <img src="{{ value.imagen }}" alt="{{ value.nombre }}">
+                            <img class="hover-1" src="{{ value.imagen }}" alt="{{ value.nombre }}">
+                        </a>
+                    </div>
+                    <div class="content">
+                        <span class="categoria-text"><a href="#">Accessories</a></span>
+                        <h5 class="title-h5">
+                            <a href="#">{{ value.nombre }}</a>
+                        </h5>
+                        <span class="precio-span">
+                            <span class="new">${{ value.precio }}</span>
+                        </span>
+                    </div>
+                    <div class="actions">
+                        <button title="Add To Cart" class="action add-to-cart" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-Cart"><i class="pe-7s-shopbag"></i>
+                        </button>
+                        <button class="action wishlist" title="Wishlist" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-Wishlist"><i class="pe-7s-like"></i></button>
+                        <button class="action quickview" data-link-action="quickview" title="Quick view"
+                            data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="pe-7s-look"></i>
+                        </button>
+                        <button class="action compare" title="Compare" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal-Compare"><i class="pe-7s-refresh-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
