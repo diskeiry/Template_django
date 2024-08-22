@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,6 +9,10 @@
 </head>
 
 <body>
+    {% include 'components/sidebar.html' %}
+    
+{% block content %}
+    
     <div class="container mt-5">
         <h1 class="mb-4">Carrito de Compras</h1>
         <div class="row">
@@ -50,6 +55,7 @@
             {% endfor %}
         </div>
     </div>
+{% endblock %}
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

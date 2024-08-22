@@ -24,7 +24,9 @@ def renderizar_salida(request):
     return render(request, 'productos/salida.productos.html')
 
 def renderizar_home(request):
-    return render(request, 'home.html')
+    productos = Producto.objects.all()
+    return render(request, 'home.html', {'productos': productos})
+  
 
 def exito(request):
     return render(request, 'productos/exito.html')
@@ -42,6 +44,8 @@ def renderizar_create(request):
     else:
         form = ProductoForm()
     return render(request, 'productos/entrada.productos.html', {'mensaje':mensaje})
+
+
 
 def listar_productos(request):
     productos = Producto.objects.all()

@@ -57,3 +57,25 @@ slideImages.forEach(image => {
         image.style.opacity = '1';
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productId = this.getAttribute('data-product-id');
+            addToCart(productId);
+        });
+    });
+
+    function addToCart(productId) {
+        // Aquí puedes hacer una llamada AJAX para agregar el producto al carrito en el servidor
+        console.log(`Producto ${productId} agregado al carrito`);
+
+        // Ejemplo de actualización del carrito en el frontend
+        const cartCount = document.getElementById('cart-count');
+        cartCount.textContent = parseInt(cartCount.textContent) + 1;
+    }
+});
+

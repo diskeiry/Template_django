@@ -25,4 +25,5 @@ urlpatterns = [
     path('', views.renderizar_home, name='url_home'),
     
     
+    
 ]

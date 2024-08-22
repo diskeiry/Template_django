@@ -7,8 +7,9 @@ class ProductoForm(forms.ModelForm):
         model = Producto
         fields = ['nombre', 'descripcion', 'precio', 'stock', 'categoria', 'imagen']
         widgets = {
+            'nombre': forms.TextInput(attrs={'placeholder': 'Nombre del producto'}),
             'descripcion': forms.Textarea(attrs={'rows': 4,'cols': 40}),
-            'precio': forms.NumberInput(attrs={'step': '0:01'}),
+            'precio': forms.NumberInput(attrs={'step': '0:01','max': '50'}),
             'stock': forms.NumberInput(attrs={'min': '0'}),
             'imagen': forms.URLInput(attrs={'placeholder': 'URL de la imagen (opcional)'}),
         }
